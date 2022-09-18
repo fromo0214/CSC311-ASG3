@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="JavaCS">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+
+    <path id="JavaCS.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/junit-4.12.jar"/>
+        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="lib/jcommon-1.0.23.jar"/>
+        <pathelement location="lib/ant-junit.jar"/>
+        <pathelement location="lib/commons-math3-3.6.jar"/>
+        <pathelement location="lib/hamcrest-library-1.3.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    
+    <target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="JavaCS.classpath"/>
+        </javac>
+    </target>
+    
+    <target name="run">
+        <java classname="csudh.csc311.asg3.MyLinkedList" failonerror="true" fork="yes">
+            <classpath refid="JavaCS.classpath"/>
+        </java>
+    </target>
+
+    <target name="test">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_all">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_mylist">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testMyList"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_addt">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testAddT"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_addintt">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testAddIntT"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_addall">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testAddAllCollectionOfQextendsT"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_clear">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testClear"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_contains">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testContains"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_containsall">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testContainsAll"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_get">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testGet"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+    <target name="test_indexof">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testIndexOf"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_indexofnull">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testIndexOfNull"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_isempty">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testIsEmpty"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_iterator">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testIterator"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_lastindexof">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testLastIndexOf"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_removeobject">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testRemoveObject"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_removeint">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testRemoveInt"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_removeall">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testRemoveAll"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_set">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testSet"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_size">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testSize"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_sublist">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testSubList"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+
+     <target name="test_toarray">
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="csudh.csc311.asg3.MyLinkedListTest" methods="testToArray"/>
+            <classpath refid="JavaCS.classpath"/>
+        </junit>
+    </target>
+  
+</project>
