@@ -1,0 +1,214 @@
+{
+  "tests": [
+    {
+      "name": "build test",
+      "setup": "ant clean",
+      "run": "ant build",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 40
+    },
+    {
+      "name": "mylist",
+      "setup": "ant build",
+      "run": "ant test_mylist",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "addt",
+      "setup": "ant build",
+      "run": "ant test_addt",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "addint1",
+      "setup": "ant build",
+      "run": "ant test_addint1",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "addall",
+      "setup": "ant build",
+      "run": "ant test_addall",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "clear",
+      "setup": "ant build",
+      "run": "ant test_clear",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "contains",
+      "setup": "ant build",
+      "run": "ant test_contains",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "containsall",
+      "setup": "ant build",
+      "run": "ant test_containsall",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "get",
+      "setup": "ant build",
+      "run": "ant test_get",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "indexof",
+      "setup": "ant build",
+      "run": "ant test_indexof",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "indexofnull",
+      "setup": "ant build",
+      "run": "ant test_indexofnull",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "isempty",
+      "setup": "ant build",
+      "run": "ant test_isempty",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "iterator",
+      "setup": "ant build",
+      "run": "ant test_iterator",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "lastindexof",
+      "setup": "ant build",
+      "run": "ant test_lastindexof",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeobject",
+      "setup": "ant build",
+      "run": "ant test_removeobject",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeint",
+      "setup": "ant build",
+      "run": "ant removeint",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeall",
+      "setup": "ant build",
+      "run": "ant test_removeall",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "set",
+      "setup": "ant build",
+      "run": "ant test_set",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "size",
+      "setup": "ant build",
+      "run": "ant test_size",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "sublist",
+      "setup": "ant build",
+      "run": "ant test_sublist",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "toarray",
+      "setup": "ant build",
+      "run": "ant test_toarray",
+      "input": "",
+      "output": "[junit] Tests run: 1, Failures: 0, Errors: 0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    }
+  ]
+}
